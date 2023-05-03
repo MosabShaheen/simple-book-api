@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-800;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto p-8;
+  }
+  h2 {
+    @apply font-bold text-2xl;
+  }
+  .item {
+    @apply bg-white rounded-lg;
+  }
+  .item img {
+    @apply w-full h-48 object-cover rounded-t-lg;
+  }
+  .item > div {
+    @apply p-6;
+  }
+  p {
+    @apply mt-4 mb-3;
+  }
+  
+}

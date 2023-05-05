@@ -20,8 +20,8 @@ export default async function Books() {
             <div>
               <h2>{item.name}</h2>
               <p>Type: {item.type}</p>
-              <p className="font-bold">
-                available: {item.available ? "true" : "false"}
+              <p className="font-bold flex  ">
+                Available: {item.available ? <p className="mx-auto m-0">Yes</p> : <p className="mx-auto m-0 text-red-400">No</p>}
               </p>
             </div>
           </div>

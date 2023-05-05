@@ -17,9 +17,8 @@ export default function Order() {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
-      
     });
-    console.log(form.bookId)
+    console.log(form.bookId);
   };
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -40,7 +39,7 @@ export default function Order() {
       const result = await response.json();
       console.log(result);
       alert(`Your order Id is: ${result.orderId}`);
-      router.push("/")
+      router.push("/");
     } catch (error) {
       alert(error);
     }

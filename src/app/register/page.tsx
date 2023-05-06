@@ -1,4 +1,7 @@
-import RegisterView from "@/views/register"
+import RegisterClient from "@/views/registerClient";
+
 export default function Register(){
-    return <div><RegisterView /></div>
+    return(
+        <RegisterClient />
+    )
 }

@@ -1,11 +1,9 @@
-import Image from "next/image";
-import Books from "@/views/Books";
-
+import Image from 'next/image'
+import HomeBooks from '@/views/homeBooks'
 export default function Home() {
   return (
-    <div>
+    <div> 
       {/* @ts-expect-error Server Component */}
-      <Books />
-    </div>
-  );
+      <HomeBooks /> </div>
+  )
 }

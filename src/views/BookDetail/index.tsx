@@ -24,7 +24,7 @@ export default async function BookDetail({
       <p>Price : {book?.price}</p>
       <p>Current-Stock : {book["current-stock"]}</p>
       <p className="text-red-400">Please register your self before placing order.</p>
-      <Link href="/submitOrder">
+      <Link href="/submitOrders">
         {
           book['current-stock'] == "0"?
           <button className="mt-3 disabled:opacity-50 disabled:cursor-not-allowed bg-red-700 font-medium rounded-md text-sm text-white p-2 "disabled>

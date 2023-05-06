@@ -1,7 +1,6 @@
 "use client";
 
-let check: any = [];
-export async function Letsee() {
+async function Letsee() {
   const authToken = localStorage.getItem("authToken");
   try {
     const response = await fetch(`/api/tokenOrders`, {
@@ -21,24 +20,23 @@ export async function Letsee() {
   }
 }
 
-export default async function OrderView() {
+export default async function OrderDtail() {
   const maybe = await Letsee();
   let bookHtml: any;
-  console.log(maybe.length);
-  console.log(check.length);
+
   
-  if (maybe.length === check.length) {
+  if (maybe.length ==0) {
     return (
       <div>
         <h2 className="text-red-500 text-2xl text-center">
-          You Don't have any Order Yet!
+          {`You Don't have any Order Yet!`}
         </h2>
       </div>
     );
   } else {
     bookHtml = maybe.map((item: any) => {
         return (
-          <div className="quote flex justify-between">
+          <div className="quote flex justify-between" key={item.id}>
             <span key={item.id}>Order Id: {item.id}</span>
             <span key={item.id}>Book Id: {item.bookId}</span>
             <span key={item.id}>Quantity: {item.quantity}</span>
